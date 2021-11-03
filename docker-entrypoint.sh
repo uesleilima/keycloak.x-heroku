@@ -56,10 +56,10 @@ file_env 'KEYCLOAK_ADMIN_PASSWORD'
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="-Dquarkus.http.proxy-address-forwarding=true --http-enabled=true --http-port=$PORT"
+CONFIG_ARGS=""
 RUN_CONFIG_START=false
 RUN_CONFIG=false
-SERVER_OPTS=""
+SERVER_OPTS="--http-port=$PORT"
 
 while [ "$#" -gt 0 ]
 do
