@@ -56,7 +56,7 @@ file_env 'KEYCLOAK_ADMIN_PASSWORD'
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="--db=postgres --db.url=jdbc:$DATABASE_URL"
+CONFIG_ARGS="--db-url=jdbc:$DATABASE_URL"
 RUN_CONFIG_START=false
 RUN_CONFIG=false
 SERVER_OPTS="--http-port=$PORT"
