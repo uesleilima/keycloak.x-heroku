@@ -10,3 +10,9 @@ and lower memory footprint which makes it possible for us to use a `free` dyno i
 Postgres database attached.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## References
+- [Keycloak.X Docker Image](https://github.com/keycloak/keycloak-containers/tree/main/server-x)
+- [Keycloak.X Server Configuration](https://github.com/keycloak/keycloak-community/blob/main/design/keycloak.x/configuration.md)
+- [Introducing Keycloak.X Distribution](https://www.keycloak.org/2020/12/first-keycloak-x-release.adoc)
+- [Deploy Keycloak to Heroku (Wildfly)](https://github.com/mieckert/keycloak-heroku)
