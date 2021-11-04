@@ -81,6 +81,9 @@ do
     shift
 done
 
+echo "Server: $SERVER_OPTS"
+echo "Config: $CONFIG_ARGS"
+
 if [[ "$RUN_CONFIG_START" == true ]]; then
   if [[ "$RUN_CONFIG" == true ]]; then
     echo "ERROR: You can not run 'config' when passing the '--auto-config' start option.Please, choose one or another."
