@@ -63,18 +63,21 @@ SERVER_OPTS="--http-port=$PORT"
 
 while [ "$#" -gt 0 ]
 do
-    case "$2" in
+    case "$1" in
       --auto-config)
           RUN_CONFIG_START=true
           ;;
       config)
           RUN_CONFIG=true
           ;;
+      /opt/jboss/tools/docker-entrypoint.sh)
+          echo "Ignoring redundant entrypoint"
+          ;;
       *)
-          if [[ $2 = --* || ! $2 =~ ^-.* ]]; then
-            CONFIG_ARGS="$CONFIG_ARGS $2"
+          if [[ $1 = --* || ! $1 =~ ^-.* ]]; then
+            CONFIG_ARGS="$CONFIG_ARGS $1"
           else
-            SERVER_OPTS="$SERVER_OPTS $2"
+            SERVER_OPTS="$SERVER_OPTS $1"
           fi
           ;;
     esac
