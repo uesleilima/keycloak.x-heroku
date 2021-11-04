@@ -1,0 +1,4 @@
+{
+  "KEYCLOAK_ADMIN": "admin",
+  "KEYCLOAK_ADMIN_PASSWORD": "change_me"
+}
