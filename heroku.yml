@@ -8,5 +8,3 @@ build:
     worker: Dockerfile-release
 release:
   image: worker
-  command:
-    - /opt/jboss/tools/deployment.sh
