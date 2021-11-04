@@ -8,4 +8,4 @@ build:
 release:
   image: web
   command:
-    - /opt/jboss/tools/docker-entrypoint.sh --auto-config
+    - /tmp/deploy/deployment-tasks.sh
