@@ -56,7 +56,7 @@ file_env 'KEYCLOAK_ADMIN_PASSWORD'
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="--http-port=$PORT"
+CONFIG_ARGS=""
 RUN_CONFIG_START=false
 RUN_CONFIG=false
 SERVER_OPTS=""
