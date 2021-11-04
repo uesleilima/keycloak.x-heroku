@@ -50,7 +50,7 @@ if [ "$DATABASE_URL" != "" ]; then
 
     echo "DB_ADDR=$DB_ADDR, DB_PORT=$DB_PORT, DB_DATABASE=$DB_DATABASE, DB_USER=$DB_USER, DB_PASSWORD=$DB_PASSWORD"
 
-    export DB_ARGS="--db=postgres -Dkc.db.url.host=$DB_ADDR -Dkc.db.url.database=$DB_DATABASE --db-username=$DB_USER --db-password=$DB_PASSWORD"
+    export DB_ARGS="-Dkc.db.url.host=$DB_ADDR -Dkc.db.url.database=$DB_DATABASE --db-username=$DB_USER --db-password=$DB_PASSWORD"
   fi
 fi
 
@@ -58,13 +58,13 @@ fi
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="--proxy=edge --cluster=local"
+CONFIG_ARGS=""
 RUN_CONFIG_START=false
 RUN_CONFIG=false
-SERVER_OPTS="--http-port=$PORT"
+SERVER_OPTS="--http-port=$PORT --proxy=edge --cluster=local"
 
 if [ "$DB_ARGS" != "" ]; then
-  CONFIG_ARGS="$CONFIG_ARGS $DB_ARGS"
+  SERVER_OPTS="$SERVER_OPTS $DB_ARGS"
 fi
 
 while [ "$#" -gt 0 ]; do
