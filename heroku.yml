@@ -6,4 +6,4 @@ setup:
     - plan: heroku-postgresql
       as: DATABASE
 run:
-  web: start
+  web: /opt/jboss/tools/docker-entrypoint.sh
