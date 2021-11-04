@@ -11,6 +11,9 @@ Postgres database attached.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+## Known Issues
+- Heroku is killing the dyno after it become unresponsive given the latency caused by the database migration execution. You can request for [changing the boot timeout](https://tools.heroku.support/limits/boot_timeout) manually for you app.
+
 ## References
 - [Keycloak.X Docker Image](https://github.com/keycloak/keycloak-containers/tree/main/server-x)
 - [Keycloak.X Server Configuration](https://github.com/keycloak/keycloak-community/blob/main/design/keycloak.x/configuration.md)

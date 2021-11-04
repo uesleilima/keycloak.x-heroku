@@ -5,6 +5,3 @@ setup:
 build:
   docker:
     web: Dockerfile
-    worker: Dockerfile-release
-release:
-  image: worker
