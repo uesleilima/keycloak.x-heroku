@@ -11,6 +11,15 @@ Postgres database attached.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+## Manual Deployment
+If you don't want to use the *Heroku Button* above for any reason you can deploy this manually with simple steps after cloning this repository.
+```shell
+heroku apps:create --manifest
+heroku addons:create heroku-postgresql:hobby-dev
+heroku stack:set container
+git push heroku main
+```
+
 ## Known Issues
 - Heroku is killing the dyno after it become unresponsive given the latency caused by the database migration execution. You can request for [changing the boot timeout](https://tools.heroku.support/limits/boot_timeout) manually for you app.
 
