@@ -1,0 +1,6 @@
+FROM quay.io/keycloak/keycloak-x:15.0.2
+
+COPY postgres-config.sh /opt/jboss/tools
+COPY deployment.sh /opt/jboss/tools
+
+ENTRYPOINT []

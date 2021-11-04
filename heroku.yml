@@ -5,7 +5,8 @@ setup:
 build:
   docker:
     web: Dockerfile
+    worker: Dockerfile-release
 release:
-  image: web
+  image: worker
   command:
-    - /tmp/deploy/deployment-tasks.sh
+    - /opt/jboss/tools/deployment.sh
