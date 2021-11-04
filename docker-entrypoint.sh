@@ -59,11 +59,11 @@ file_env 'KEYCLOAK_ADMIN_PASSWORD'
 CONFIG_ARGS=""
 RUN_CONFIG_START=false
 RUN_CONFIG=false
-SERVER_OPTS=""
+SERVER_OPTS="--http-port=$PORT"
 
 while [ "$#" -gt 0 ]
 do
-    case "$1" in
+    case "$2" in
       --auto-config)
           RUN_CONFIG_START=true
           ;;
@@ -71,10 +71,10 @@ do
           RUN_CONFIG=true
           ;;
       *)
-          if [[ $1 = --* || ! $1 =~ ^-.* ]]; then
-            CONFIG_ARGS="$CONFIG_ARGS $1"
+          if [[ $2 = --* || ! $2 =~ ^-.* ]]; then
+            CONFIG_ARGS="$CONFIG_ARGS $2"
           else
-            SERVER_OPTS="$SERVER_OPTS $1"
+            SERVER_OPTS="$SERVER_OPTS $2"
           fi
           ;;
     esac
