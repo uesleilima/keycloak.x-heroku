@@ -56,7 +56,7 @@ file_env 'KEYCLOAK_ADMIN_PASSWORD'
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="--db-url=jdbc:$DATABASE_URL"
+CONFIG_ARGS="--proxy=edge --db=postgres -Dkc.db.url.host=$DB_ADDR -Dkc.db.url.database=$DB_DATABASE --db-username=$DB_USER --db-password=$DB_PASSWORD"
 RUN_CONFIG_START=false
 RUN_CONFIG=false
 SERVER_OPTS="--http-port=$PORT"

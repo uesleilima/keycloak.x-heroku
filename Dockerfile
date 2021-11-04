@@ -4,4 +4,4 @@ WORKDIR /opt/jboss/keycloak
 
 COPY docker-entrypoint.sh /opt/jboss/tools
 
-RUN ./bin/kc.sh config --proxy=edge
+ENTRYPOINT ["/opt/jboss/tools/docker-entrypoint.sh", "--auto-config"]
