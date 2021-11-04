@@ -58,7 +58,7 @@ fi
 # Start Keycloak #
 ##################
 
-CONFIG_ARGS="--proxy=edge"
+CONFIG_ARGS="--proxy=edge --cluster=local"
 RUN_CONFIG_START=false
 RUN_CONFIG=false
 SERVER_OPTS="--http-port=$PORT"
