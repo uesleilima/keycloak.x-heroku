@@ -21,7 +21,7 @@ git push heroku main
 ```
 
 ## Known Issues
-- Heroku is killing the dyno after it become unresponsive given the latency caused by the database migration execution. You can request for [changing the boot timeout](https://tools.heroku.support/limits/boot_timeout) manually for you app.
+- In some cases, Heroku stops the service startup because it becomes unresponsive given the latency of the automatic database migration execution in the first initialization. If that happens, you can request for [changing the boot timeout](https://tools.heroku.support/limits/boot_timeout) manually for you app.
 
 ## References
 - [Keycloak.X Docker Image](https://github.com/keycloak/keycloak-containers/tree/main/server-x)
