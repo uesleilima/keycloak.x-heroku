@@ -5,5 +5,3 @@ COPY docker-entrypoint.sh /opt/jboss/tools
 WORKDIR /opt/jboss/keycloak
 
 RUN ./bin/kc.sh config --db=postgres
-
-ENTRYPOINT ["/opt/jboss/tools/docker-entrypoint.sh"]
